@@ -197,7 +197,7 @@ This will generate receptor + ligand preparation, perform Vina docking (CPU), Ma
 - Wohlwend et al., *ICLR* (2023) — Boltz  
 - Gainza et al., *Nat. Methods* (2020) — MaSIF  
 - Landrum et al., *RDKit* (2006–)  
-- Davis et al., *Nat. Mach. Intell.* (2024) — ADMET-AI  
+- Swanson et al., *Nat. Mach. Intell.* (2024) — ADMET-AI  
 
 ---
 
