@@ -59,6 +59,8 @@ This framework combines:
 
 Two **micromamba environments** are created for reproducibility.
 # One-time setup
+git clone https://github.com/suman-samantray/CADD_Challenge.git
+cd CADD_Challenge/
 bash install_CADDflow_env.sh
 
 # After each login
