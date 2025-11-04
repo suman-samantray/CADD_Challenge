@@ -4,11 +4,11 @@ vendor_ligands.py
 -----------------
 Generates ligand_set.smi for the CADD assignment workflow.
 
-  vendor_mode=0 → random 10-ligand subset (quick test run)
+  vendor_mode=0 → random 20-ligand subset (quick test run)
   vendor_mode=1 → full purchasable vendor library (from smiles_database.json)
   vendor_mode=2 → dynamically fetched vendor library from webserver endpoint
 
-Each output:  data/{PDB}/ligand_set.smi   (format: SMILES<TAB>NAME)
+Each output:  results/{PDB}/ligand_set.smi   (format: SMILES<TAB>NAME)
 """
 import argparse, json, random
 from pathlib import Path
