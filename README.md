@@ -59,16 +59,20 @@ This framework combines:
 
 Two **micromamba environments** are created for reproducibility.
 # One-time setup
+```bash
 git clone https://github.com/suman-samantray/CADD_Challenge.git
 cd CADD_Challenge/
 bash install_CADDflow_env.sh
+```
 
 # After each login
+```bash
 cd $WORKSPACE/CADD_flow
 source ../init_CADDflow_env.sh
+```
 
 ### 🧩 1️⃣ Boltz + Docking Environment
-check CADD_Challenge/set_env/boltz_env.yml for complete dependencies
+>Check CADD_Challenge/set_env/boltz_env.yml for complete dependencies
 ```bash
 module purge
 module load python/3.10 cuda/12.4 gcc/11.2.0
@@ -84,7 +88,7 @@ $WORKSPACE/boltz_env/bin/pip install meeko==0.3.0 matplotlib seaborn tqdm
 ```
 
 ### 🧩 2️⃣ ADMET + Descriptor Environment
-check CADD_Challenge/set_env/admet_env.yml for complete dependencies
+>Check CADD_Challenge/set_env/admet_env.yml for complete dependencies
 ```bash
 micromamba create -y -p $WORKSPACE/admet_env python=3.10 -c conda-forge
 $WORKSPACE/admet_env/bin/pip install admet-ai pandas numpy torch torchvision torchaudio scikit-learn
@@ -119,6 +123,14 @@ micromamba env export -p $WORKSPACE/admet_env > admet_env.yml
 ## 🚀 Running the Pipeline
 
 ### Example: Thrombin (PDB ID: 1PPB)
+```bash
+  vendor_mode=0 → random 20-ligand subset (quick test run)
+  vendor_mode=1 → full purchasable vendor library (from smiles_database.json)
+  vendor_mode=2 → dynamically fetched vendor library from webserver endpoint
+
+Each output:  results/{PDB ID}/ligand_set.smi
+```
+
 ```bash
 cd $WORKSPACE/CADD_flow
 ../boltz_env/bin/python -m src.run_pipeline  --pdb_id 1PPB  --vendor_mode 1  --do_masif_pre  --do_vina  --do_boltz  --do_rank_admet  --do_masif_post
