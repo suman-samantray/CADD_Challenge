@@ -107,7 +107,7 @@ micromamba env export -p $WORKSPACE/admet_env > admet_env.yml
 | Component | Requirement | Description |
 |------------|--------------|-------------|
 | **AutoDock Vina (≥1.2.7)** | CPU-compatible | Used for physics-based docking. |
-| **Boltz (≥2.2.1)** | **GPU required** (CUDA ≥12.1, PyTorch ≥2.1) | DiffDock-class ML docking; *cannot run on CPU*. |
+| **Boltz (≥2.2.1)** | **GPU required** (CUDA ≥12.1, PyTorch ≥2.1) | ML docking; *cannot run on CPU*. |
 | **MaSIF-torch** | GPU recommended | Used twice: pre-docking (pocket localization) and post-docking (pose validation). |
 | **RDKit** | CPU | Descriptor & ADMET rule calculation. |
 | **ADMET-AI** | CPU / GPU | ML-based ADMET property prediction. |
