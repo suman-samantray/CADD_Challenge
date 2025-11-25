@@ -9,7 +9,7 @@ It was designed and validated on **NERSC Perlmutter** (A100 GPU nodes) for large
 
 This framework combines:
 - **Physics-based docking** — AutoDock Vina  
-- **ML docking (DiffDock-class)** — Boltz (PyTorch-Lightning)  
+- **ML docking** — Boltz
 - **Protein surface analysis & validation** — MaSIF-torch (pre- and post-docking)  
 - **Molecular descriptors & ADMET rules** — RDKit + ADMET-AI  
 - **Visualization & statistics**
